@@ -34,7 +34,11 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(glm)
 
-add_executable(${PROJECT_NAME} src/main.cpp)
+add_executable(${PROJECT_NAME} src/main.cpp
+        src/shader_program.cpp
+        src/shader_program.hpp
+        src/utils/file_utils.hpp
+        src/utils/file_utils.cpp)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE glfw glad glm)
 
